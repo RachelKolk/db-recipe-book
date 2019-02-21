@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
         tbl.string('name', 128)
         .notNullable();
 
-        tbl.string('directions', 255)
+        tbl.text('directions')
         .notNullable();
 
         tbl

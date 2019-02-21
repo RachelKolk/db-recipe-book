@@ -6,16 +6,17 @@ exports.up = function(knex, Promise) {
           .unsigned()
           .references('id')
           .inTable('recipes')
-          .onDelete('CASCADE')
-          .onUpdate('CASCADE');
+          
 
         tbl
           .integer('ingredientId')
           .unsigned()
           .references('id')
           .inTable('ingredients')
-          .onDelete('CASCADE')
-          .onUpdate('CASCADE');
+        
+        tbl
+          .float('quantity')
+          .notNullable();
     });
 };
 

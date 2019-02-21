@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
         tbl.string('name', 128)
         .notNullable();
 
-        tbl.string('measurement-verbage', 128)
+        tbl.string('measurementTxt', 128)
         .notNullable();
     });
 };
